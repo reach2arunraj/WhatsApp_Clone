@@ -1,10 +1,33 @@
 import React from 'react'
 import "./Chat.css"
+import { Avatar,IconButton } from "@material-ui/core"
+import { SearchOutlined,MoreVert, AttachFile } from "@material-ui/icons";
 
 function Chat() {
     return (
         <div className="chat">
-            <h1>I am a  Chat</h1>
+          <div className="chat__header">
+            <Avatar />
+            <div className="chat__headerInfo">
+              <h3>Room Name</h3>
+              <p>Last Seen at...</p>
+            </div>
+            <div className="chat__headerRight">
+              <IconButton>
+                <SearchOutlined />
+              </IconButton>
+              <IconButton>
+                <AttachFile />
+              </IconButton>
+              <IconButton>
+                <MoreVert />
+              </IconButton>
+            </div>
+          </div>
+
+          <div className="chat__body">
+            <p>This is a messahe</p>
+          </div>
         </div>
     )
 }
